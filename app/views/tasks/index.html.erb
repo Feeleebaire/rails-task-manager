@@ -1,0 +1,9 @@
+<h1>Today i need to do:</h1>
+<% @tasks.each do |task| %>
+<ul>
+  <li> <%=link_to task.title, task_path(task)%> - <%=task.status%></li>
+</ul>
+
+<%end%>
+
+<%= link_to 'create new task', new_task_path %>
